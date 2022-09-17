@@ -8,7 +8,7 @@ After=network-online.target
 User=ansible
 Group=ansible
 Type=oneshot
-ExecStart=/usr/bin/python3 /home/ansible/stacks/alert/beep/script/check_server_online 192.168.1.10
+ExecStart=/usr/bin/python3 /home/ansible/stacks/alert/beep/script/check_state_to_beep 192.168.1.10
 SendSIGKILL=no
 
 [Install]
