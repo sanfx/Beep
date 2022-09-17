@@ -9,7 +9,7 @@ Requires=check_state_to_beep.service
 
 [Timer]
 Unit=check_state_to_beep.service
-OnCalendar=*/5 * * * * *
+OnCalendar=*-*-* *:*:00
 
 [Install]
 WantedBy=timers.target
