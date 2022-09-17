@@ -5,8 +5,8 @@ Wants=network-online.target check_state_to_beep.timer
 After=network-online.target
 
 [Service]
-User=ansible
-Group=ansible
+User=root
+Group=root
 Type=oneshot
 ExecStart=/usr/bin/python3 /home/ansible/stacks/alert/beep/script/check_state_to_beep 192.168.1.10
 SendSIGKILL=no
