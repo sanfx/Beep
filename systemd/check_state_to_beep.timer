@@ -1,0 +1,15 @@
+# This timer unit is for testing
+# By Sanjeev Kumar
+# Licensed under GPL V2
+#
+
+[Unit]
+Description=Logs some system statistics to the systemd journal
+Requires=check_state_to_beep.service
+
+[Timer]
+Unit=check_state_to_beep.service
+OnCalendar=*/5 * * * * *
+
+[Install]
+WantedBy=timers.target

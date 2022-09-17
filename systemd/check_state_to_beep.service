@@ -1,0 +1,15 @@
+[Unit]
+Description=Service to check server/service status state and alert with Beep sound if service is inactive.
+After=multi-user.target
+Wants=network-online.target check_state_to_beep.timer
+After=network-online.target
+
+[Service]
+User=ansible
+Group=ansible
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/ansible/stacks/Beep/script/check_server_online 192.168.1.10
+SendSIGKILL=no
+
+[Install]
+WantedBy=multi-user.target
